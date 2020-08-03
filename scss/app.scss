@@ -1,7 +1,10 @@
 @import "utils/variables";
 @import "node_modules/materialize-css/sass/materialize";
 
+@import "utils/shared";
 @import "elements";
 
+@import "components/main";
 @import "components/hero";
 @import "components/flare";
+@import "components/skillsgrid";

@@ -1,0 +1,33 @@
+$boxSize: 75px;
+
+main {
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    animation: scroll 1s linear infinite;
+    content: "";
+    position: absolute;
+    top: -1800px;
+    right: -50vw;
+    bottom: -50vw;
+    left: -50vw;
+    background-image: linear-gradient(to right, rgba(#f232de, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(#f232de, 0.15) 1px, transparent 1px);
+    background-size: $boxSize $boxSize;
+    z-index: -1;
+    transform: perspective(900px) rotateX(25deg);
+    perspective-origin: top;
+  }
+}
+
+
+@keyframes scroll {
+  0% {
+
+    transform: perspective(900px) rotateX(25deg) translateY(0);
+  }
+  100% {
+    transform: perspective(900px) rotateX(25deg) translateY(-#{$boxSize * 2});
+  }
+}

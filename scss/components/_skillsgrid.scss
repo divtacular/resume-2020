@@ -1,0 +1,27 @@
+.skills-grid {
+  .skills-grid_skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    li, .skill {
+      list-style: none;
+      flex: 0 0 50%;
+      text-align: center;
+      position: relative;
+      padding: 2px;
+
+      span {
+        padding: 10px;
+        display: block;
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .caption {
+        display: block;
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
