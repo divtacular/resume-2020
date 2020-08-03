@@ -10,6 +10,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
+                    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat&display=swap" rel="stylesheet" />
                     <link rel="icon" href="/favicon.ico" />
                   </Head>
                 <body>
