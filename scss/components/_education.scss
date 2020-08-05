@@ -1,15 +1,35 @@
-.education_year {
-  @extend .col;
-  @extend .s2;
-}
-
 .education_course {
-  @extend .col;
-  @extend .s10;
+  background: $purple;
+  background: rgba($purple, 0.3);
+  display: flex;
+  align-content: center;
+  padding: 10px;
+  margin-bottom: 50px;
 
-  header {
-    span {
-      display: block;
-    }
+  .education_icon {
+    @extend .col;
+    @extend .s2;
+    @extend .m2;
+    @extend .l1;
+  }
+
+  .education_entry {
+    @extend .col;
+    @extend .s10;
+    @extend .m10;
+    @extend .l11;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .education_year{
+    display: block;
+    text-align: center;
+  }
+
+  .education_qualification,
+  .education_course-details {
+    width: 100%;
   }
 }
