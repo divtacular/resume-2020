@@ -3,18 +3,21 @@
     display: flex;
     flex-wrap: wrap;
 
-    li, .skill {
+    li {
       list-style: none;
       flex: 0 0 50%;
       text-align: center;
       position: relative;
-      padding: 2px;
 
       span {
-        padding: 10px;
+        padding: 5px;
         display: block;
         font-size: 3rem;
         text-align: center;
+      }
+
+      .svg-inline--fa {
+        color: rgba($pink, 1)
       }
 
       .caption {

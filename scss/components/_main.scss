@@ -19,6 +19,40 @@ main {
     transform: perspective(900px) rotateX(25deg);
     perspective-origin: top;
   }
+
+  & > div {
+    @media #{$large-and-up} {
+      margin: 0 auto;
+      width: 80%;
+      max-width: 1600px;
+    }
+  }
+
+  .primary {
+    @extend .col;
+    @extend .s12;
+    @extend .m8;
+    @extend .l9;
+  }
+
+  .secondary {
+    @extend .col;
+    @extend .s12;
+    @extend .m4;
+    @extend .l3;
+  }
+
+  .section-heading {
+    color: $yellow;
+    display: block;
+    font-family: Audiowide, cursive;
+
+    @supports (-webkit-background-clip: text) {
+      background: linear-gradient($pink, $yellow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 }
 
 

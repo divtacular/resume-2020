@@ -16,10 +16,13 @@ $sunPink: #f232de;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //padding: 50px 50px 0;
   padding: 12px 12px 0;
   position: relative;
   overflow: hidden;
+
+  @media #{$medium-and-up} {
+    padding: 50px 50px 0;
+  }
 
   &:before {
     content: "";
@@ -64,24 +67,23 @@ $sunPink: #f232de;
   }
 
   .sunset_tagline {
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 5;
+    width: 100%;
+
+    @media #{$medium-and-up} {
+      margin-bottom: 20px;
+    }
 
     .sunset_intro {
-      //margin: 50px 15px;
       margin: 5px;
       padding: 10px;
-      max-width: 75%;
-
       max-width: 100%;
 
       background: rgba(#111, 0.6);
       color: $white;
 
-      @media #{$medium-and-up} {
+      @media #{$large-and-up} {
         padding: 20px;
+        max-width: 75%;
       }
 
       h1 {

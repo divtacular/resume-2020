@@ -1,0 +1,73 @@
+.work {
+  header {
+    background: $purple;
+    background: rgba($purple, 0.3);
+    display: flex;
+    align-content: center;
+    padding: 10px;
+
+    span {
+      line-height: 2rem;
+    }
+
+    .work_icon {
+      @extend .col;
+      @extend .s2;
+      @extend .m2;
+      @extend .l1;
+
+      display: flex;
+      justify-content: center;
+    }
+
+    .work_entry {
+      @extend .col;
+      @extend .s10;
+      @extend .m10;
+      @extend .l11;
+
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .work_workplace {
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    .work_url {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-left: auto;
+    }
+
+    .work_year {
+      width: 100%;
+    }
+  }
+
+  .work_desc {
+    ul {
+      padding: 0 0 0 15px;
+
+      li {
+        margin-bottom: 5px;
+        padding-left: 30px;
+        position: relative;
+
+        &:before {
+          content: "";
+          background: url(/assets/images/glasses.svg) no-repeat left center;
+          background-size: 100% auto;
+          width: 20px;
+          height: 20px;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+}

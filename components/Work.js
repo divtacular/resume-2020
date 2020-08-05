@@ -1,33 +1,42 @@
 import React from 'react';
+import ComputerSVG from '../assets/computer.svg';
 
 const Work = () => {
     return (
         <div className={"work-experience"}>
+            <h2 className="section-heading">Work Experience</h2>
+            {/*<div className={"work"}>*/}
+            {/*    <header>*/}
+            {/*        <div><span className={"work_year"}>March 2016 - June 2002</span></div>*/}
+            {/*        <div>*/}
+            {/*            <span className={"work_workplace"}>boohoo.com</span>*/}
+            {/*            <span className={"work_url"}>https://www.boohoo.com/</span>*/}
+            {/*        </div>*/}
+            {/*    </header>*/}
+            {/*    <div className={"work_desc"}>*/}
+            {/*        <h3>Frontend Developer - Salesforce Cloud Commerce</h3>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+            {/*<div className={"work"}>*/}
+            {/*    <header>*/}
+            {/*        <span className={"work_workplace"}>boohoo.com</span>*/}
+            {/*        <span className={"work_year"}>September 2014 - March 2016</span>*/}
+            {/*        <span className={"work_url"}>https://www.boohoo.com/</span>*/}
+            {/*    </header>*/}
+            {/*    <div className={"work_desc"}>*/}
+            {/*        <h3>Frontend Developer - Magento</h3>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className={"work"}>
                 <header>
-                    <span className={"work_workplace"}>boohoo.com</span>
-                    <span className={"work_year"}>March 2016 - June 2002</span>
-                    <span className={"work_url"}>https://www.boohoo.com/</span>
-                </header>
-                <div className={"work_desc"}>
-                    <h3>Frontend Developer - Salesforce Cloud Commerce</h3>
-                </div>
-            </div>
-            <div className={"work"}>
-                <header>
-                    <span className={"work_workplace"}>boohoo.com</span>
-                    <span className={"work_year"}>September 2014 - March 2016</span>
-                    <span className={"work_url"}>https://www.boohoo.com/</span>
-                </header>
-                <div className={"work_desc"}>
-                    <h3>Frontend Developer - Magento</h3>
-                </div>
-            </div>
-            <div className={"work"}>
-                <header>
-                    <span className={"work_workplace"}>FirstFound</span>
-                    <span className={"work_year"}>October 2012 – September 2014</span>
-                    <span className={"work_url"}>https://www.firstfound.co.uk/</span>
+                    <div className={"work_icon"}>
+                        <ComputerSVG/>
+                    </div>
+                    <div className={"work_entry"}>
+                        <span className={"work_workplace"}>FirstFound</span>
+                        <span className={"work_url"}>www.firstfound.co.uk</span>
+                        <span className={"work_year"}>October 2012 – September 2014</span>
+                    </div>
                 </header>
                 <div className={"work_desc"}>
                     <h3>Senior Web Developer</h3>
@@ -35,7 +44,7 @@ const Work = () => {
                         eight. I was promoted to senior developer and on top of my existing responsibilities I was to
                         perform the on going training for the team and to act as a mentor for an apprentice member.</p>
 
-                    <p><strong>Highlights</strong></p>
+                    <h4><strong>Highlights</strong></h4>
 
                     <ul>
                         <li>Managed additional responsibilities to my team along side an already hectic work schedule.
@@ -48,9 +57,14 @@ const Work = () => {
             </div>
             <div className={"work"}>
                 <header>
-                    <span className={"work_workplace"}>FirstFound</span>
-                    <span className={"work_year"}>January 2010 - October 2012</span>
-                    <span className={"work_url"}>https://www.firstfound.co.uk/</span>
+                    <div className={"work_icon"}>
+                        <ComputerSVG/>
+                    </div>
+                    <div className={"work_entry"}>
+                        <span className={"work_workplace"}>FirstFound</span>
+                        <span className={"work_url"}>www.firstfound.co.uk</span>
+                        <span className={"work_year"}>January 2010 - October 2012</span>
+                    </div>
                 </header>
                 <div className={"work_desc"}>
                     <h3>Web Developer</h3>
@@ -61,7 +75,7 @@ const Work = () => {
                         for the creation of company emails, which meant accurately building HTML emails by hand for all
                         major platforms, including Outlook.</p>
 
-                    <p><strong>Highlights</strong></p>
+                    <h4><strong>Highlights</strong></h4>
                     <ul>
                         <li>Key contributor in establishing successful new department.</li>
                         <li>Built sites for businesses funded by government business grants, with strict accessibility
@@ -82,18 +96,25 @@ const Work = () => {
             </div>
             <div className={"work"}>
                 <header>
-                    <span className={"work_workplace"}>FirstFound</span>
-                    <span className={"work_year"}>October 2008 – January 2010</span>
-                    <span className={"work_url"}>https://www.firstfound.co.uk/</span>
+                    <div className={"work_icon"}>
+                        <ComputerSVG/>
+                    </div>
+                    <div className={"work_entry"}>
+                        <span className={"work_workplace"}>FirstFound</span>
+                        <span className={"work_url"}>www.firstfound.co.uk</span>
+                        <span className={"work_year"}>October 2008 – January 2010</span>
+                    </div>
                 </header>
                 <div className={"work_desc"}>
                     <h3>SEO Consultant</h3>
                     <p>In my first office role I was responsible for the complete on-site SEO for client sites.
                         Strategies were implemented and evaluated on an on going basis, with adjustments made as
                         customer needs and results required.</p>
-                    <p><strong>Highlights</strong></p>
-                    <p>Critically analysed success of strategies and alternatives as campaign needs evolved.</p>
 
+                    <h4><strong>Highlights</strong></h4>
+                    <ul>
+                        <li>Critically analysed success of strategies and alternatives as campaign needs evolved.</li>
+                    </ul>
                 </div>
             </div>
         </div>

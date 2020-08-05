@@ -15,15 +15,17 @@ export default function Home() {
             <Flare/>
 
             <main>
-                <div className={"container"}>
-                    <section className={"primary"}>
-                        {/*intro*/}
-                        <Education/>
-                        <Work/>
-                    </section>
-                    <section className={"secondary"}>
-                        <SkillsGrid/>
-                    </section>
+                <div>
+                    {/*intro*/}
+                    <div className={"row"}>
+                        <section className={"primary"}>
+                            <Work/>
+                            <Education/>
+                        </section>
+                        <section className={"secondary"}>
+                            <SkillsGrid/>
+                        </section>
+                    </div>
                 </div>
             </main>
             <footer>

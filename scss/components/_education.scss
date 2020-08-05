@@ -1,0 +1,15 @@
+.education_year {
+  @extend .col;
+  @extend .s2;
+}
+
+.education_course {
+  @extend .col;
+  @extend .s10;
+
+  header {
+    span {
+      display: block;
+    }
+  }
+}

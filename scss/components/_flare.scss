@@ -1,5 +1,7 @@
 .flare {
-  height: 8px;
+  height: 5px;
+  position: relative;
+  z-index: 5;
   background: rgba(#fff7a8, 0.8);
   box-shadow:
           0 0 8px 4px rgba(#fff7a8, .9),

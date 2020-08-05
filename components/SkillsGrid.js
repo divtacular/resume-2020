@@ -24,7 +24,7 @@ const SkillsGrid = () => {
 
     return (
         <div className={"skills-grid"}>
-            <h3>Skills</h3>
+            <h2 className="section-heading">Skills</h2>
             <ul className={"skills-grid_skills"}>
                 <li>
                     <span>
