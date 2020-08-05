@@ -1,39 +1,49 @@
 import React from 'react';
+import {gql, useQuery} from '@apollo/client';
+import ReactHtmlParser from 'react-html-parser';
+import NotebookSVG from "../assets/notebook.svg";
+
+
+const GET_QUALIFICATIONS = gql`{
+    qualifications {
+        nodes {
+            id
+            title
+            content
+            educationDetails {
+                coursetitle
+                year
+            }
+        }
+    }
+}`;
 
 const Education = () => {
+    const {loading, error, data} = useQuery(GET_QUALIFICATIONS);
+
+    if (loading) return <></>;
+    if (error) return `Error! ${error.message}`;
+
     return (
         <div className={"education"}>
             <h2 className="section-heading">Education</h2>
-            <div className={"row"}>
-                <div className={"education_year"}>2004</div>
-                <div className={"education_course "}>
-                    <header>
-                        <span className={"education_institution"}>Manchester Metropolitan University</span>
-                        <span className={"education_qualification"}>HND Computing</span>
-                    </header>
-                    <div className={"education_course-details"}>
-                        <p>Merit - Computing</p>
-                    </div>
-                </div>
-            </div>
-            <div className={"row"}>
-                <div className={"education_year"}>2002</div>
-                <div className={"education_course"}>
-                    <header>
-                        <span className={"education_institution"}>Stretford Grammar School</span>
-                        <span className={"education_qualification"}>A Levels</span>
-                    </header>
-                    <div className={"education_course-details"}>
-                        <p>Courses</p>
-                        <ul>
-                            <li>Computing</li>
-                            <li>Business Studies</li>
-                            <li>Psychology</li>
-                            <li>General Studies</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            {data.qualifications.nodes.map(({title, content, id, educationDetails}) => {
+                return (
+                    <div className={"education_course"} key={id}>
+                            <div className={"education_icon"}>
+                                <NotebookSVG/>
+                                <strong className={"education_year"}>{educationDetails.year} </strong>
+                            </div>
+                            <div className={"education_entry"}>
+                                <span className={"education_institution"}>{title}</span>
+                                <div className={"education_qualification"}>{educationDetails.coursetitle}</div>
+
+                                <div className={"education_course-details"}>
+                                    {ReactHtmlParser(content)}
+                                </div>
+                            </div>
+                    </div>)
+            })};
         </div>
     );
 };
