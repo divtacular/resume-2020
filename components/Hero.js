@@ -1,6 +1,6 @@
 const Hero = () => {
     return (
-        <div className={"sunset"}>
+        <div className={"sunset"} role={"banner"}>
             <div className={"sunset_sun"}/>
             <div className={"sunset_tagline"}>
                 <div className="sunset_intro">

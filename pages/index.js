@@ -33,7 +33,7 @@ const GET_CONTENT = gql`{
         }
     }
 
-    skills(first: 30) {
+    skills(where: {orderby: {field: MENU_ORDER, order: ASC}}, first: 20) {
         nodes {
             id
             skillDetails {

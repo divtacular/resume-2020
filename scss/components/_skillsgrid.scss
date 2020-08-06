@@ -11,7 +11,7 @@
 
       @media #{$medium-and-up} {
         flex: 0 0 50%;
-      }skills
+      }
 
       span {
         padding: 5px;
@@ -20,8 +20,29 @@
         text-align: center;
       }
 
+      svg,
       .svg-inline--fa {
-        color: rgba($pink, 1)
+        color: $pink;
+        max-height: 3rem;
+      }
+
+      .fa-aws,
+      .fa-js-square {
+        color: $yellow;
+      }
+
+      .fa-magento,
+      .fa-gulp,
+      .fa-html5 {
+        color: #ff3864;
+      }
+
+      .fa-bootstrap {
+        color: #791e94;
+      }
+
+      .fa-grunt {
+        color: #ff6c11;
       }
 
       .caption {

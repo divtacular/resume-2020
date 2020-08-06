@@ -1,4 +1,6 @@
 <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+    <title id="notebookIconTitle">Computer icon</title>
+    <desc id="notebookIconDesc">Computer icon denotes workplace milestone</desc>
     <path d="m158.757 179.8h-61.514a5.152 5.152 0 0 0 -5.152 5.152v9.269h71.818v-9.269a5.152 5.152 0 0 0 -5.152-5.152z"
           fill="#526faa"/>
     <rect fill="#ddd" height="57.777" rx="5.152" width="247.524" x="4.238" y="194.223"/>

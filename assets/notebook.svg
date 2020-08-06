@@ -1,7 +1,7 @@
 <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
 
-    <title id="notebookIcon">The title of the SVG</title>
-    <desc id="uniqueDescID">A longer, more complete description for complex graphics.</desc>
+    <title id="notebookIconTitle">Notebook icon</title>
+    <desc id="notebookIconDesc">Icon of a notebook denoting education milestone</desc>
 
     <path d="m57.159 4h156.682a0 0 0 0 1 0 0v248a0 0 0 0 1 0 0h-156.682a25 25 0 0 1 -25-25v-198a25 25 0 0 1 25-25z"
           fill="#fcc24c"/>

@@ -1,27 +1,40 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {library} from '@fortawesome/fontawesome-svg-core'
 import * as icons from '@fortawesome/free-brands-svg-icons';
-import * as customIcons from "../libs/icons";
+import * as customFontAwsIcons from "../libs/icons";
+
+import FoundationSVG from '../assets/foundation.svg';
+import ApacheSVG from '../assets/apache.svg';
+import MaterializeSVG from '../assets/materializecss.svg';
+import jQuerySVG from '../assets/jquery.svg';
 
 const SkillsGrid = ({skills}) => {
-    library.add(customIcons);
+    const customSVGIcons = {FoundationSVG, ApacheSVG, MaterializeSVG, jQuerySVG};
+    library.add(customFontAwsIcons);
+
+    const renderCustomSVG = (icon) => {
+        return customSVGIcons[icon]();
+    }
 
     return (
         <div className={"skills-grid"}>
-            <h2 className="section-heading">Skills</h2>
+            <h2 className="section-heading">Knowledge</h2>
 
             <ul className={"skills-grid_skills"}>
                 {skills.nodes.map(({id, skillDetails}) => {
                     return (
                         <li key={id}>
                             <span>
-                                {skillDetails.isfonticon ?
-                                    <FontAwesomeIcon
-                                        title={`Proficiency: ${skillDetails.skill}`}
-                                        icon={icons[skillDetails.iconname] ?
-                                            icons[skillDetails.iconname] : customIcons[skillDetails.iconname]}
-                                    /> : <></>
-                                }
+                                <i aria-hidden="true">
+                                    {skillDetails.isfonticon ?
+                                        <FontAwesomeIcon
+                                            title={`Proficiency: ${skillDetails.skill}`}
+                                            icon={icons[skillDetails.iconname] ?
+                                                icons[skillDetails.iconname] :
+                                                customFontAwsIcons[skillDetails.iconname]}/>
+                                        : renderCustomSVG(skillDetails.iconname)
+                                    }
+                                </i>
                                 <span className={"caption"}>
                                     {skillDetails.skill}
                                 </span>
@@ -30,25 +43,6 @@ const SkillsGrid = ({skills}) => {
                     )
                 })}
             </ul>
-
-
-            {/*<ul className={"skills-grid_skills"}>*/}
-            {/*    <li>*/}
-            {/*        <span>*/}
-            {/*            <FontAwesomeIcon title={"Proficiency: ES6"} icon={faJsSquare}/>*/}
-            {/*            <span className={"caption"}>ES6</span>*/}
-            {/*        </span>*/}
-            {/*    </li>*/}
-            {/*    <li>*/}
-            {/*        <span>*/}
-            {/*            <FontAwesomeIcon title={"Proficiency: CSS3"} icon={faCss3}/>*/}
-            {/*            <span className={"caption"}>CSS 3</span>*/}
-            {/*        </span>*/}
-            {/*    </li>*/}
-
-            {/*    /!* Apache, Foundation, Materialize, jQuery as standalone SVGs *!/*/}
-
-            {/*</ul>*/}
         </div>
     );
 };

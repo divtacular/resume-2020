@@ -1,4 +1,6 @@
 <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+    <title id="notebookIconTitle">Reel icon</title>
+    <desc id="notebookIconDesc">Reel icon, an error state is present</desc>
     <circle cx="113.236" cy="79.649" fill="#f4efed" r="56.075" transform="matrix(.224 -.975 .975 .224 10.212 172.128)"/>
     <path d="m169.078 232.426h-111.685a22.024 22.024 0 0 1 -21.8-18.9l-6.1-42.526h167.485l-6.1 42.533a22.024 22.024 0 0 1 -21.8 18.893z"
           fill="#ff4397"/>
