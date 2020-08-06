@@ -32,14 +32,14 @@ main {
     @extend .col;
     @extend .s12;
     @extend .m8;
-    @extend .l9;
+    @extend .xl9;
   }
 
   .secondary {
     @extend .col;
     @extend .s12;
     @extend .m4;
-    @extend .l3;
+    @extend .xl3;
   }
 
   .section-heading {
@@ -52,6 +52,13 @@ main {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+  }
+
+  .about {
+    background: $purple;
+    background: rgba($purple, 0.3);
+    padding: 10px;
+    margin-top: 50px;
   }
 }
 
