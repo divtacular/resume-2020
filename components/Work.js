@@ -1,34 +1,11 @@
-import React from 'react';
-import {gql, useQuery} from '@apollo/client';
 import ReactHtmlParser from 'react-html-parser';
-
 import ComputerSVG from '../assets/computer.svg';
 
-
-const GET_WORK = gql`{
-    works {
-        nodes {
-            id
-            title(format: RENDERED)
-            content
-            workDetails {
-                dates
-                jobtitle
-                url
-            }
-        }
-    }
-}`;
-const Work = () => {
-    const {loading, error, data} = useQuery(GET_WORK);
-
-    if (loading) return <></>;
-    if (error) return `Error! ${error.message}`;
-
+const Work = ({works}) => {
     return (
         <div className={"work-experience"}>
             <h2 className="section-heading">Work Experience</h2>
-            {data.works.nodes.map(({title, content, id, workDetails}) => {
+            {works.nodes.map(({title, content, id, workDetails}) => {
                 return (
                     <div className={"work"} key={id}>
                         <header>

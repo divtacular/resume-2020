@@ -1,37 +1,17 @@
-import React from 'react';
-import {gql, useQuery} from '@apollo/client';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import * as icons from '@fortawesome/free-brands-svg-icons';
 import {library} from '@fortawesome/fontawesome-svg-core'
+import * as icons from '@fortawesome/free-brands-svg-icons';
 import * as customIcons from "../libs/icons";
 
-const GET_SKILLS = gql`{
-    skills(first: 30) {
-        nodes {
-            id
-            skillDetails {
-                skill
-                isfonticon
-                iconname
-            }
-        }
-    }
-}`;
-
-const SkillsGrid = (props) => {
+const SkillsGrid = ({skills}) => {
     library.add(customIcons);
-
-    const {loading, error, data} = useQuery(GET_SKILLS);
-
-    if (loading) return <></>;
-    if (error) return `Error! ${error.message}`;
 
     return (
         <div className={"skills-grid"}>
             <h2 className="section-heading">Skills</h2>
 
             <ul className={"skills-grid_skills"}>
-                {data.skills.nodes.map(({id, skillDetails}) => {
+                {skills.nodes.map(({id, skillDetails}) => {
                     return (
                         <li key={id}>
                             <span>
