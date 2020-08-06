@@ -6,7 +6,7 @@ import {library} from '@fortawesome/fontawesome-svg-core'
 import * as customIcons from "../libs/icons";
 
 const GET_SKILLS = gql`{
-    skills(first: 20) {
+    skills(first: 30) {
         nodes {
             id
             skillDetails {
@@ -18,7 +18,7 @@ const GET_SKILLS = gql`{
     }
 }`;
 
-const SkillsGrid = () => {
+const SkillsGrid = (props) => {
     library.add(customIcons);
 
     const {loading, error, data} = useQuery(GET_SKILLS);
