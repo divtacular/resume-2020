@@ -4,7 +4,7 @@ import FilmReelSVG from '../assets/filmreel.svg';
 
 const Loading = ({error}) => {
     return (
-        <div className="wrapper">
+        <div className="wrapper" data-test={"component-loading"}>
             <header>
                 <Hero/>
             </header>
