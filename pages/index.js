@@ -1,5 +1,5 @@
 import {gql, useQuery} from '@apollo/client';
-
+import {Switch} from "react-materialize";
 import Hero from "../components/Hero";
 import Flare from "../components/Flare";
 import SkillsGrid from "../components/SkillsGrid";
@@ -47,12 +47,24 @@ const GET_CONTENT = gql`{
 
 export default function Home() {
     const {loading, error, data} = useQuery(GET_CONTENT);
+    const [animate, setAnimate] = React.useState(true);
 
     if (loading || error) return <Loading error={error} />;
+
+    const toggleAnimations = () => {
+        setAnimate(!animate);
+    }
 
     return (
         <div className="wrapper">
             <header>
+                <Switch
+                    id="Switch-11"
+                    offLabel="Off"
+                    onChange={toggleAnimations}
+                    onLabel="On"
+                    checked={animate}
+                />
                 <Hero/>
             </header>
 

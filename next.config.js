@@ -1,5 +1,8 @@
-module.exports = {
-    webpack(config) {
+const withSass = require('@zeit/next-sass');
+const withPurgeCss = require('next-purgecss');
+
+module.exports = withSass(withPurgeCss({
+    webpack: (config, {isServer}) => {
         config.module.rules.push({
             test: /\.svg$/,
             issuer: {
@@ -8,6 +11,6 @@ module.exports = {
             use: ['@svgr/webpack'],
         });
 
-        return config;
-    },
-};
+        return config
+    }
+}));
