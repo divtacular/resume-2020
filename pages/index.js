@@ -1,5 +1,6 @@
 import {gql, useQuery} from '@apollo/client';
 import {Switch} from "react-materialize";
+
 import Hero from "../components/Hero";
 import Flare from "../components/Flare";
 import SkillsGrid from "../components/SkillsGrid";
@@ -7,7 +8,7 @@ import Education from "../components/Education";
 import Loading from "../components/Loading";
 import Work from "../components/Work";
 
-const GET_CONTENT = gql`{
+export const GET_CONTENT = gql`{
     qualifications {
         nodes {
             id
@@ -56,7 +57,7 @@ export default function Home() {
     }
 
     return (
-        <div className="wrapper">
+        <div className={`wrapper animation_${animate ? 'on' : 'off'}`} data-test={"component-home"}>
             <header>
                 <Switch
                     id="Switch-11"
