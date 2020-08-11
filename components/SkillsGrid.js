@@ -16,15 +16,10 @@ import {
     faSass
 } from '@fortawesome/free-brands-svg-icons';
 
-import * as customFontAwsIcons from "../libs/icons";
-//Todo move to custom fonts file and return as arr
-import FoundationSVG from '../assets/foundation.svg';
-import ApacheSVG from '../assets/apache.svg';
-import MaterializeSVG from '../assets/materializecss.svg';
-import jQuerySVG from '../assets/jquery.svg';
+import customSVGIcons from "../libs/customSVG";
+import * as customFontAwesomeIcons from "../libs/icons";
 
 const SkillsGrid = ({skills}) => {
-    const customSVGIcons = {FoundationSVG, ApacheSVG, MaterializeSVG, jQuerySVG};
     const icons = {
         faJsSquare,
         faCss3,
@@ -41,8 +36,9 @@ const SkillsGrid = ({skills}) => {
         faSass
     };
 
-    library.add(customFontAwsIcons);
+    library.add(customFontAwesomeIcons);
 
+    //Renders non fontawesome SVGs
     const renderCustomSVG = (icon) => {
         return customSVGIcons[icon]();
     }
@@ -62,7 +58,7 @@ const SkillsGrid = ({skills}) => {
                                             title={`Proficiency: ${skillDetails.skill}`}
                                             icon={icons[skillDetails.iconname] ?
                                                 icons[skillDetails.iconname] :
-                                                customFontAwsIcons[skillDetails.iconname]}/>
+                                                customFontAwesomeIcons[skillDetails.iconname]}/>
                                         : renderCustomSVG(skillDetails.iconname)
                                     }
                                 </i>
