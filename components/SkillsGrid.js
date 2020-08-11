@@ -13,7 +13,8 @@ import {
     faGulp,
     faGrunt,
     faGit,
-    faSass
+    faSass,
+    faAws
 } from '@fortawesome/free-brands-svg-icons';
 
 import customSVGIcons from "../libs/customSVG";
@@ -33,7 +34,8 @@ const SkillsGrid = ({skills}) => {
         faGulp,
         faGrunt,
         faGit,
-        faSass
+        faSass,
+        faAws
     };
 
     library.add(customFontAwesomeIcons);

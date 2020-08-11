@@ -34,7 +34,7 @@ export const GET_CONTENT = gql`{
         }
     }
 
-    skills(where: {orderby: {field: MENU_ORDER, order: ASC}}, first: 20) {
+    skills(where: {orderby: {field: MENU_ORDER, order: ASC}}, first: 30) {
         nodes {
             id
             skillDetails {
