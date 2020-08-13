@@ -1,4 +1,5 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import ReactHtmlParser from 'react-html-parser';
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {
     faJsSquare,
@@ -65,7 +66,7 @@ const SkillsGrid = ({skills}) => {
                                     }
                                 </i>
                                 <span className={"caption"}>
-                                    {skillDetails.skill}
+                                    {ReactHtmlParser(skillDetails.skill)}
                                 </span>
                             </span>
                         </li>

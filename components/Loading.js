@@ -6,7 +6,7 @@ const Loading = ({error}) => {
     return (
         <div className="wrapper" data-test={"component-loading"}>
             <header>
-                <Hero/>
+                <Hero />
             </header>
 
             <Flare/>

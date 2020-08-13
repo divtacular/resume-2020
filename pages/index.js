@@ -1,5 +1,6 @@
 import {gql, useQuery} from '@apollo/client';
 import {Switch} from "react-materialize";
+import ReactHtmlParser from 'react-html-parser';
 
 import Hero from "../components/Hero";
 import Flare from "../components/Flare";
@@ -7,6 +8,7 @@ import SkillsGrid from "../components/SkillsGrid";
 import Education from "../components/Education";
 import Loading from "../components/Loading";
 import Work from "../components/Work";
+import Footer from "../components/Footer";
 
 export const GET_CONTENT = gql`{
     qualifications {
@@ -44,29 +46,38 @@ export const GET_CONTENT = gql`{
             }
         }
     }
+
+    globalDataSettingsGroupSettings {
+        aboutText
+        heroDesc
+        heroTitle
+    }
 }`;
 
 export default function Home() {
     const {loading, error, data} = useQuery(GET_CONTENT);
     const [animate, setAnimate] = React.useState(true);
 
-    if (loading || error) return <Loading error={error} />;
-
     const toggleAnimations = () => {
         setAnimate(!animate);
     }
 
+    if (loading || error) return <Loading error={error}/>;
+
     return (
         <div className={`wrapper animation_${animate ? 'on' : 'off'}`} data-test={"component-home"}>
-            <header>
-                <Switch
-                    id="Switch-11"
-                    offLabel="Off"
-                    onChange={toggleAnimations}
-                    onLabel="On"
-                    checked={animate}
-                />
-                <Hero/>
+            <header className={"header"}>
+                <div className={"header_animation-toggle"}>
+                    <span>Animations:</span>
+                    <Switch
+                        id="Switch-11"
+                        offLabel="Off"
+                        onChange={toggleAnimations}
+                        onLabel="On"
+                        checked={animate}
+                    />
+                </div>
+                <Hero text={data.globalDataSettingsGroupSettings}/>
             </header>
 
             <Flare/>
@@ -76,14 +87,7 @@ export default function Home() {
                     <div className={"row"}>
                         <div className={"about col s12"}>
                             <h2 className="section-heading">About</h2>
-                            <p>I am a passionate and experienced Web Developer with a comprehensive skill set that
-                                covers
-                                both front and back end development. My skills and knowledge are always up to date and
-                                inline with best practices, I make a point of keeping up with emerging trends.</p>
-
-                            <p>I have a proven ability to work equally well alone or collaborating as part of a team and
-                                can
-                                manage multiple projects concurrently.</p>
+                            {ReactHtmlParser(data.globalDataSettingsGroupSettings.aboutText)}
                         </div>
                     </div>
                     <div className={"row"}>
@@ -92,14 +96,12 @@ export default function Home() {
                             <Education qualifications={data.qualifications}/>
                         </section>
                         <section className={"secondary"}>
-                            <SkillsGrid skills={data.skills} />
+                            <SkillsGrid skills={data.skills}/>
                         </section>
                     </div>
                 </div>
             </main>
-            <footer>
-                {/* Contact stuff, legal*/}
-            </footer>
+            <Footer />
         </div>
     )
 }
