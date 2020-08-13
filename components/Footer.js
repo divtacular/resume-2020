@@ -5,8 +5,6 @@ import {
     faLinkedin,
     faTwitterSquare
 } from '@fortawesome/free-brands-svg-icons';
-import * as customFontAwesomeIcons from "../libs/icons";
-
 
 const Footer = () => {
     return (

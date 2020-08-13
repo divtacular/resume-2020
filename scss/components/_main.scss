@@ -1,4 +1,4 @@
-$boxSize: 75px;
+$boxSize: 100px;
 
 main {
   overflow: hidden;
@@ -12,7 +12,7 @@ main {
     bottom: -50vw;
     left: -50vw;
     background-image: linear-gradient(to right, rgba(#f232de, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(#f232de, 0.15) 1px, transparent 1px);
+                      linear-gradient(to bottom, rgba(#f232de, 0.15) 1px, transparent 1px);
     background-size: $boxSize $boxSize;
     z-index: -1;
     transform: perspective(900px) rotateX(25deg);
