@@ -42,6 +42,6 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^26.2.2",
     "jest-enzyme": "^7.1.2",
-    "jest-react-hooks-shallow": "^1.4.1",
+    "jest-react-hooks-shallow": "^1.4.1"
   }
 }
