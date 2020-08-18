@@ -20,6 +20,8 @@ import {
 
 import customSVGIcons from "../libs/customSVG";
 import * as customFontAwesomeIcons from "../libs/icons";
+import PropTypes from "prop-types";
+import Work from "./Work";
 
 const SkillsGrid = ({skills}) => {
     const icons = {
@@ -47,7 +49,7 @@ const SkillsGrid = ({skills}) => {
     }
 
     return (
-        <div className={"skills-grid"}>
+        <div className={"skills-grid"} data-test={"component-skills"}>
             <h2 className="section-heading">Knowledge</h2>
 
             <ul className={"skills-grid_skills"}>
@@ -75,6 +77,20 @@ const SkillsGrid = ({skills}) => {
             </ul>
         </div>
     );
+};
+
+SkillsGrid.propTypes = {
+    skills: PropTypes.shape({
+        nodes: PropTypes.arrayOf(PropTypes.shape({
+                id: PropTypes.string.isRequired,
+                skillDetails: PropTypes.shape({
+                    skill: PropTypes.string.isRequired,
+                    iconname: PropTypes.string.isRequired,
+                    isfonticon: PropTypes.bool
+                })
+            })
+        )
+    })
 };
 
 export default SkillsGrid;

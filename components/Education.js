@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types'
 import ReactHtmlParser from 'react-html-parser';
 import NotebookSVG from "../assets/notebook.svg";
 
 const Education = ({qualifications}) => {
     return (
-        <div className={"education"}>
+        <div className={"education"} data-test={"component-education"}>
             <h2 className="section-heading">Education</h2>
             {qualifications.nodes.map(({title, content, id, educationDetails}) => {
                 return (
@@ -24,6 +25,21 @@ const Education = ({qualifications}) => {
             })}
         </div>
     );
+};
+
+Education.propTypes = {
+    qualifications: PropTypes.shape({
+        nodes: PropTypes.arrayOf(PropTypes.shape({
+                id: PropTypes.string.isRequired,
+                title: PropTypes.string.isRequired,
+                content: PropTypes.string.isRequired,
+                educationDetails: PropTypes.shape({
+                    coursetitle: PropTypes.string.isRequired,
+                    year: PropTypes.string.isRequired
+                })
+            })
+        )
+    })
 };
 
 export default Education;
