@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ad125c19-ecfa-4e6f-8ec7-34fe1cda5311" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/__tests__/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Loading.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectId" id="1ex7i0JYEsSoQbAe3IGmDNaQm9z" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/__tests__" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\David\webstormProjects\portfolio-2020\frontend\__mocks__" />
+      <recent name="C:\Users\David\webstormProjects\portfolio-2020\frontend\scss\components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\David\webstormProjects\portfolio-2020\frontend\__tests__" />
+      <recent name="C:\Users\David\webstormProjects\portfolio-2020\frontend\assets" />
+      <recent name="C:\Users\David\webstormProjects\portfolio-2020\frontend\components" />
+      <recent name="C:\Users\David\webstormProjects\portfolio-2020\frontend\public\assets\images" />
+      <recent name="C:\Users\David\webstormProjects\portfolio-2020\frontend\scss\components" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad125c19-ecfa-4e6f-8ec7-34fe1cda5311" name="Default Changelist" comment="" />
+      <created>1595251513767</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595251513767</updated>
+      <workItem from="1595251515133" duration="3802000" />
+      <workItem from="1595255882369" duration="316000" />
+      <workItem from="1595256238981" duration="928000" />
+      <workItem from="1595594162725" duration="599000" />
+      <workItem from="1595595447929" duration="4233000" />
+      <workItem from="1595843572221" duration="663000" />
+      <workItem from="1595844317669" duration="86000" />
+      <workItem from="1595844466300" duration="13779000" />
+      <workItem from="1596019291099" duration="10385000" />
+      <workItem from="1596191594600" duration="6525000" />
+      <workItem from="1596446519190" duration="4424000" />
+      <workItem from="1596457050785" duration="13964000" />
+      <workItem from="1596553812109" duration="1203000" />
+      <workItem from="1596613917066" duration="5738000" />
+      <workItem from="1596626089489" duration="12514000" />
+      <workItem from="1596705808753" duration="1834000" />
+      <workItem from="1596714603249" duration="4809000" />
+      <workItem from="1596723270505" duration="12552000" />
+      <workItem from="1596788848392" duration="16503000" />
+      <workItem from="1597065171758" duration="625000" />
+      <workItem from="1597136561540" duration="1274000" />
+      <workItem from="1597152895804" duration="1147000" />
+      <workItem from="1597154504267" duration="6988000" />
+      <workItem from="1597232268826" duration="5032000" />
+      <workItem from="1597318258040" duration="8407000" />
+      <workItem from="1597486895318" duration="1808000" />
+      <workItem from="1597681512028" duration="2689000" />
+      <workItem from="1597750726885" duration="150000" />
+      <workItem from="1597750891418" duration="11427000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="505" y="318" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596793363821">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="505" y="318" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1596793363821" />
+    <state x="460" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1597152327792">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="460" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1597152327792" />
+    <state x="510" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595849103464">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="510" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1595849103464" />
+    <state x="535" y="283" key="FileChooserDialogImpl" timestamp="1596623057517">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="535" y="283" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1596623057517" />
+    <state x="263" y="169" key="SettingsEditor" timestamp="1597154672586">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="263" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1597154672586" />
+    <state x="100" y="100" width="1284" height="850" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597751476067">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="100" y="100" width="1284" height="850" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1597751476067" />
+    <state x="588" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596736631820">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="588" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1596736631820" />
+    <state x="489" y="242" width="720" height="596" key="find.popup" timestamp="1597319786567">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="489" y="242" width="720" height="596" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1597319786567" />
+    <state x="391" y="247" key="run.anything.popup" timestamp="1597323761576">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="391" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1597323761576" />
+    <state x="425" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1597759051092">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="425" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1597759051092" />
+  </component>
+</project>
