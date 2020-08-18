@@ -44,7 +44,7 @@ const Footer = () => {
                         preventScrolling: false,
                         startingTop: '4%'
                     }}
-                    trigger={<Button node="anchor" flat small={true}>Credits</Button>}
+                    trigger={<Button node="button" flat small={true}>Credits</Button>}
                 >
                     <p>
                         Flat Icons provided free by <a href="https://www.flaticon.com/authors/flat-icons"

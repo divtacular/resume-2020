@@ -1,9 +1,11 @@
 import ReactHtmlParser from 'react-html-parser';
 import ComputerSVG from '../assets/computer.svg';
+import PropTypes from "prop-types";
+import Education from "./Education";
 
 const Work = ({works}) => {
     return (
-        <div className={"work-experience"}>
+        <div className={"work-experience"} data-test={"component-work"}>
             <h2 className="section-heading">Work Experience</h2>
             {works.nodes.map(({title, content, id, workDetails}) => {
                 return (
@@ -27,6 +29,21 @@ const Work = ({works}) => {
             })}
         </div>
     );
+};
+
+Work.propTypes = {
+    works: PropTypes.shape({
+        nodes: PropTypes.arrayOf(PropTypes.shape({
+                id: PropTypes.string.isRequired,
+                title: PropTypes.string.isRequired,
+                content: PropTypes.string.isRequired,
+                workDetails: PropTypes.shape({
+                    url: PropTypes.string.isRequired,
+                    dates: PropTypes.string.isRequired
+                })
+            })
+        )
+    })
 };
 
 export default Work;
