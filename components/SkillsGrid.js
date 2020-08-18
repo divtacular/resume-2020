@@ -43,7 +43,7 @@ const SkillsGrid = ({skills}) => {
 
     //Renders non fontawesome SVGs
     const renderCustomSVG = (icon) => {
-        return customSVGIcons[icon]();
+        return customSVGIcons[icon] ? customSVGIcons[icon]() : null;
     }
 
     return (

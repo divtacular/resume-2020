@@ -50,6 +50,11 @@ const mocks = [
                             }
                         }
                     ]
+                },
+                globalDataSettingsGroupSettings: {
+                        "aboutText": "<p>I am a passionate and experienced commercially aware Web Developer</p>",
+                        "heroDesc": "Experienced web developer practiced in bespoke ecommerce and CMS development",
+                        "heroTitle": "<span>David Smythe,</span><span>Frontend Web Developer</span>"
                 }
             }
         }
