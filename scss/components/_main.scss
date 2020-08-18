@@ -1,0 +1,77 @@
+$boxSize: 100px;
+
+main {
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -1800px;
+    right: -50vw;
+    bottom: -50vw;
+    left: -50vw;
+    background-image: linear-gradient(to right, rgba(#f232de, 0.15) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(#f232de, 0.15) 1px, transparent 1px);
+    background-size: $boxSize $boxSize;
+    z-index: -1;
+    transform: perspective(900px) rotateX(25deg);
+    perspective-origin: top;
+  }
+
+  .animation_on &:before {
+    animation: scroll 1s linear infinite;
+  }
+
+  & > div {
+    @media #{$large-and-up} {
+      margin: 0 auto;
+      width: 80%;
+      max-width: 1600px;
+    }
+  }
+
+  .primary {
+    @extend .col;
+    @extend .s12;
+    @extend .m8;
+    @extend .xl9;
+  }
+
+  .secondary {
+    @extend .col;
+    @extend .s12;
+    @extend .m4;
+    @extend .xl3;
+  }
+
+  .section-heading {
+    color: $yellow;
+    display: block;
+    font-family: Audiowide, cursive;
+
+    @supports (-webkit-background-clip: text) {
+      background: linear-gradient($pink, $yellow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .about {
+    background: $purple;
+    background: rgba($purple, 0.3);
+    padding: 10px;
+    margin-top: 50px;
+  }
+}
+
+
+@keyframes scroll {
+  0% {
+
+    transform: perspective(900px) rotateX(25deg) translateY(0);
+  }
+  100% {
+    transform: perspective(900px) rotateX(25deg) translateY(-#{$boxSize * 2});
+  }
+}

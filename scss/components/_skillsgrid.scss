@@ -1,0 +1,56 @@
+.skills-grid {
+  .skills-grid_skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      list-style: none;
+      flex: 0 0 33%;
+      text-align: center;
+      position: relative;
+
+      @media #{$medium-and-up} {
+        flex: 0 0 50%;
+      }
+
+      span {
+        padding: 5px;
+        display: block;
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      svg,
+      .svg-inline--fa {
+        color: $pink;
+        max-height: 3rem;
+        max-width: 50%;
+      }
+
+      .fa-aws,
+      .fa-js-square {
+        color: $yellow;
+      }
+
+      .fa-magento,
+      .fa-gulp,
+      .fa-html5 {
+        color: $neonRed;
+      }
+
+      .fa-bootstrap {
+        color: $neonPurple;
+      }
+
+      .fa-grunt {
+        color: $neonOrange;
+      }
+
+      .caption {
+        display: block;
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}

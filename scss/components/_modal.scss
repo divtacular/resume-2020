@@ -1,0 +1,22 @@
+.modal {
+  background: darken($neonOrange, 15%);
+
+  a {
+    color: $yellow;
+    opacity: 0.8;
+    font-weight: bold;
+    transition: opacity 100ms ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .modal-footer {
+    background: inherit;
+
+    .btn-flat {
+      color: $yellow;
+    }
+  }
+}

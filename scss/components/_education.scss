@@ -1,0 +1,39 @@
+.education_course {
+  background: $purple;
+  background: rgba($purple, 0.3);
+  display: flex;
+  align-content: center;
+  padding: 10px;
+  margin-bottom: 50px;
+
+  .education_icon {
+    @extend .col;
+    @extend .s2;
+    @extend .m2;
+    @extend .l1;
+  }
+
+  .education_entry {
+    @extend .col;
+    @extend .s10;
+    @extend .m10;
+    @extend .l11;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .education_year{
+    display: block;
+    text-align: center;
+  }
+
+  .education_institution {
+    font-weight: 600;
+  }
+
+  .education_qualification,
+  .education_course-details {
+    width: 100%;
+  }
+}
