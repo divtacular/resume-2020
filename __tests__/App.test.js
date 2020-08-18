@@ -52,9 +52,9 @@ const mocks = [
                     ]
                 },
                 globalDataSettingsGroupSettings: {
-                        "aboutText": "<p>I am a passionate and experienced commercially aware Web Developer</p>",
-                        "heroDesc": "Experienced web developer practiced in bespoke ecommerce and CMS development",
-                        "heroTitle": "<span>David Smythe,</span><span>Frontend Web Developer</span>"
+                    "aboutText": "<p>I am a passionate and experienced commercially aware Web Developer</p>",
+                    "heroDesc": "Experienced web developer practiced in bespoke ecommerce and CMS development",
+                    "heroTitle": "<span>David Smythe,</span><span>Frontend Web Developer</span>"
                 }
             }
         }
@@ -74,7 +74,7 @@ const setup = (props = {}, state = null) => {
             <Home/>
         </MockedProvider>
     );
-}
+};
 
 describe('initial render states', () => {
     //Suppress `act()` error until better understood
@@ -107,5 +107,44 @@ describe('initial render states', () => {
 
         const component = findByTestAttr(wrapper, 'component-home');
         expect(component.exists()).toBe(true);
+    });
+});
+
+describe('state tests', () => {
+    let wrapper;
+
+    const originalError = console.error;
+    const mockSetAnimate = jest.fn();
+
+    beforeAll(() => {
+        console.error = (...args) => {
+            if (/Warning.*not wrapped in act/.test(args[0])) {
+                return;
+            }
+
+            originalError.call(console, ...args);
+        };
+    });
+
+    beforeEach(() => {
+        //Set mock state for animation state
+        mockSetAnimate.mockClear();
+        React.useState = jest.fn(() => {
+            return [true, mockSetAnimate]
+        });
+        wrapper = setup();
+    })
+
+    test('animate toggle sets state',async () => {
+        await new Promise(resolve => setTimeout(resolve, 100)); // wait for response
+        wrapper.update();
+
+        const toggleSwitch = wrapper.find('header .switch input');
+        toggleSwitch.simulate('change');
+        expect(mockSetAnimate).toHaveBeenCalled();
+    });
+
+    afterAll(() => {
+        console.error = originalError;
     });
 });
