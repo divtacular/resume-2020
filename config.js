@@ -1,4 +1,4 @@
-let url = 'http://localhost:8080/graphql';
+let url = 'https://davidsmythe.com/headless/graphql';
 
 const Config = {
     gqlUrl: url,

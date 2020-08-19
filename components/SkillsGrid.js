@@ -21,7 +21,6 @@ import {
 import customSVGIcons from "../libs/customSVG";
 import * as customFontAwesomeIcons from "../libs/icons";
 import PropTypes from "prop-types";
-import Work from "./Work";
 
 const SkillsGrid = ({skills}) => {
     const icons = {
@@ -49,8 +48,8 @@ const SkillsGrid = ({skills}) => {
     }
 
     return (
-        <div className={"skills-grid"} data-test={"component-skills"}>
-            <h2 className="section-heading">Knowledge</h2>
+        <div className={"skills-grid"} data-test={"component-skills"} aria-labelledby={"skills-heading"}>
+            <h2 className="section-heading" id={"skills-heading"}>Knowledge</h2>
 
             <ul className={"skills-grid_skills"}>
                 {skills.nodes.map(({id, skillDetails}) => {

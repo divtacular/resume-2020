@@ -5,8 +5,8 @@ import Education from "./Education";
 
 const Work = ({works}) => {
     return (
-        <div className={"work-experience"} data-test={"component-work"}>
-            <h2 className="section-heading">Work Experience</h2>
+        <div className={"work-experience"} data-test={"component-work"} aria-labelledby={"work-heading"}>
+            <h2 className="section-heading" id={"work-heading"}>Work Experience</h2>
             {works.nodes.map(({title, content, id, workDetails}) => {
                 return (
                     <div className={"work"} key={id}>

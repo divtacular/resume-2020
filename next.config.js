@@ -1,10 +1,4 @@
-//const withSass = require('@zeit/next-sass');
-const withPurgeCss = require('next-purgecss');
-
-module.exports = withPurgeCss({
-    purgeCss: {
-        whitelist: () => ['animation_on', 'animation_off', 'switch', 'lever']
-    },
+module.exports = {
     webpack: (config, {isServer}) => {
         config.module.rules.push({
             test: /\.svg$/,
@@ -16,4 +10,4 @@ module.exports = withPurgeCss({
 
         return config
     }
-});
+};

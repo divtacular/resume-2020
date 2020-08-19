@@ -6,11 +6,11 @@ main {
 
   &:before {
     content: "";
-    position: absolute;
-    top: -1800px;
-    right: -50vw;
-    bottom: -50vw;
-    left: -50vw;
+    position: fixed;
+    top: $boxSize * -2;
+    right: $boxSize * -1;
+    bottom: $boxSize * -1;
+    left: $boxSize * -1;
     background-image: linear-gradient(to right, rgba(#f232de, 0.15) 1px, transparent 1px),
                       linear-gradient(to bottom, rgba(#f232de, 0.15) 1px, transparent 1px);
     background-size: $boxSize $boxSize;
