@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 5;
 
   .header_animation-toggle {
     background: rgba(#111, 0.6);
