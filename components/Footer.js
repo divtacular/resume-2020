@@ -12,9 +12,9 @@ const Footer = () => {
             <div>
                 <span>&copy; David Smythe
                     <a href="mailto:me@davidsmythe.com"> me@davidsmythe.com</a>
-                    <a className={"footer_social"} href={"https://twitter.com/divtacular"}>
-                        <FontAwesomeIcon title={`Go to my Twitter Profile`} icon={faTwitterSquare}/>
-                    </a>
+                    {/*<a className={"footer_social"} href={"https://twitter.com/divtacular"}>*/}
+                    {/*    <FontAwesomeIcon title={`Go to my Twitter Profile`} icon={faTwitterSquare}/>*/}
+                    {/*</a>*/}
                     <a className={"footer_social"} href={"https://www.linkedin.com/in/david-smythe-8582b378/"}>
                         <FontAwesomeIcon title={`Go to my LinkedIn page`} icon={faLinkedin}/>
                     </a>
