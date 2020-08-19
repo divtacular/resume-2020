@@ -4,8 +4,8 @@ import NotebookSVG from "../assets/notebook.svg";
 
 const Education = ({qualifications}) => {
     return (
-        <div className={"education"} data-test={"component-education"}>
-            <h2 className="section-heading">Education</h2>
+        <div className={"education"} data-test={"component-education"} aria-labelledby={"education-heading"}>
+            <h2 className="section-heading" id={"education-heading"}>Education</h2>
             {qualifications.nodes.map(({title, content, id, educationDetails}) => {
                 return (
                     <div className={"education_course"} key={id}>
